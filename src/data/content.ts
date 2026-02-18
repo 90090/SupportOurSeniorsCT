@@ -15,13 +15,22 @@ export const services: Service[] = [
     details: `
       <p>Our Financial Support Services help seniors and their families manage financial matters with confidence and clarity:</p>
       <ul>
-        <li>Determine current and future cash needs</li>
-        <li>Perform basic budgeting and expense tracking</li>
-        <li>Establish organized record-keeping systems for financial transactions</li>
-        <li>Coordinate with financial advisors and accountants</li>
-        <li>Assist with bill payment and expense management</li>
-        <li>Help navigate insurance claims and benefits</li>
-        <li>Provide guidance on financial decision-making</li>
+        <li>Process all mail</li>
+        <li>Determine current cash needs</li>
+        <li>Perform Basic Budgeting</li>
+        <li>Establish record-keeping systems for financial transactions</li>
+        <li>Deposit Checks</li>
+        <li>Pay monthly bills reconcile checkbooks</li>
+        <li>Prepare yearend tax data, make estimated tax payments</li>
+        <li>Assist in review and update insurance coverages</li>
+        <li>Coordinate services necessary to maintain home</li>
+        <li>Submit medical insurance claims and appeals as appropriate</li>
+        <li>Inventory household items and review insurance update needs before outside help is hired.</li>
+        <li>Coordinate home health care (live ins, aides, homemaker-health aides) - See also Medical Services</li>
+        <li>Coordinate and submit tax documentation to accountant for quarterly and annual tax returns (State and Federal), make quarterly payments</li>
+        <li>Coordinate financial affairs including liaison with brokers, accountants, attorneys and trust officers.</li>
+        <li>Review reports from brokers and trustees</li>
+        <li>Personal status, Financial and other specific reports will be provided to accountants, lawyers, trustees, brokers, family members or others AS SPECIFIED BY THE CLIENT. All other client matters are kept in the strictest confidence.</li>
       </ul>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-j9r9uz7e svg [data-color="1"] {fill: #2B074D;}</style></defs>
@@ -43,15 +52,15 @@ export const services: Service[] = [
     description: 'Provide support, in a professional and compassionate manner, to assist in relieving stress caused by household and financial tasks.',
     details: `
       <p>Our Medical Support Services provide comprehensive assistance to help seniors navigate healthcare complexities:</p>
+      <p>Serve independent and dependent seniors and their families as they progress through the aging process, transitions and growing needs that brings, while maintaining as much independence and autonomy as each situation allows.</p>
       <ul>
-        <li>Coordinate medical appointments and transportation</li>
-        <li>Organize and maintain medical records</li>
-        <li>Communicate with healthcare providers</li>
-        <li>Track medications and ensure proper adherence</li>
-        <li>Assist with insurance claims and medical billing</li>
-        <li>Provide companionship during medical visits</li>
-        <li>Help understand treatment options and medical information</li>
-        <li>Coordinate home healthcare services</li>
+        <li>Coordinate community-based services to maintain or improve independent living.</li>
+        <li>Coordinate home/health care needs (see also Financial Services)</li>
+        <li>Coordinate meal delivery or preparation, in home and home-care services such as housekeepers, aides, companion, live-ins, shoppers and drivers. Contract for independent home service contractors.</li>
+        <li>Coordinate Insurance support and mediation when needed</li>
+        <li>Assist with medical appointments: act as liaison to family member to oversee appointment, share concerns with doctor of family members, transcribe instructions and reports by doctors and report back to family</li>
+        <li>Provide support on long term care insurance, retirement communities, assisted living and convalescent home facilities.</li>
+        <li>Coordinate the plan and support for Medicaid (Title XIX) benefits Assist in phasing in the next level of care/living. Coordinate the move, arrange for handling and dispersal of cherished possessions, antiques, collectibles; prepare home for sale; and help the dependent senior client or appropriate family member secure the next level of care. When requested and authorized, liaison with attorneys, doctors, family etc. Work as an advocate, protector and/or surrogate for the client. Serve as Conservator for the client with court approval.</li>
       </ul>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-l8lsk95n svg [data-color="1"] {fill: currentcolor;}</style></defs>
@@ -70,16 +79,9 @@ export const services: Service[] = [
     description: 'Serve independent and dependent seniors living at home who have become overwhelmed or unable to maintain their household.',
     details: `
       <p>Our Household Support Services help seniors maintain their independence and quality of life at home:</p>
-      <ul>
-        <li>Coordinate home maintenance and repairs</li>
-        <li>Arrange for cleaning and housekeeping services</li>
-        <li>Organize meal planning and preparation assistance</li>
-        <li>Help with laundry and personal care needs</li>
-        <li>Coordinate yard work and seasonal maintenance</li>
-        <li>Manage household inventory and shopping</li>
-        <li>Assist with decluttering and organization</li>
-        <li>Ensure home safety and accessibility modifications</li>
-      </ul>
+      <p>Serve independent and dependent seniors living at home who have become overwhelmed or unable to keep up with the daily tasks required in preserving the value of the home. Through anticipating and acting upon all possible needs to keep the home safe and well maintained.</p>
+      <p>Assist in review and update insurance coverages. Coordinate services necessary to maintain home. Assess safety risks within home, create plan and proposed budget for safety modifications. Schedule, coordinate and oversee all update work to achieve safety measures. Identify “handicap living” requirements within the residence (ie wider doorways, showers etc.) Coordinate with contractors to oversee projects. Inventory household items and review insurance update needs before outside help is hired.</p>
+      <p>See also “Financial Services” list</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-j9r9uxns svg [data-color="1"] {fill: currentcolor;}
 #comp-l8j3bmnb__item-j9r9uxns svg [data-color="2"] {fill: currentcolor;}</style></defs>
@@ -103,14 +105,14 @@ export const services: Service[] = [
     details: `
       <p>Our Conservator Services provide legal representation and care management when families need professional assistance:</p>
       <ul>
-        <li>Serve as court-appointed conservator when needed</li>
-        <li>Manage financial affairs and estate matters</li>
-        <li>Make healthcare and living arrangement decisions</li>
-        <li>Maintain detailed records for court reporting</li>
-        <li>Advocate for the senior's best interests</li>
-        <li>Coordinate with attorneys and healthcare providers</li>
-        <li>Handle complex family situations professionally</li>
-        <li>Ensure compliance with legal requirements</li>
+        <li>Serve independent and dependent seniors and their families as they progress through the aging process, transitions and growing needs that brings, while maintaining as much independence and autonomy as each situation allows.</li>
+        <li>Coordinate community-based services to maintain or improve independent living.</li>
+        <li>Coordinate home/health care needs (see also Financial Services)</li>
+        <li>Coordinate meal delivery or preparation, in home and home-care services such as housekeepers, aides, companion, live-ins, shoppers and drivers. Contract for independent home service contractors.</li>
+        <li>Coordinate Insurance support and mediation when needed</li>
+        <li>Assist with medical appointments: act as liaison to family member to oversee appointment, share concerns with doctor of family members, transcribe instructions and reports by doctors and report back to family</li>
+        <li>Provide support on long term care insurance, retirement communities, assisted living and convalescent home facilities.</li>
+        <li>Coordinate the plan and support for Medicaid (Title XIX) benefits Assist in phasing in the next level of care/living. Coordinate the move, arrange for handling and dispersal of cherished possessions, antiques, collectibles; prepare home for sale; and help the dependent senior client or appropriate family member secure the next level of care. When requested and authorized, liaison with attorneys, doctors, family etc. Work as an advocate, protector and/or surrogate for the client. Serve as Conservator for the client with court approval.</li>
       </ul>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-lsot4c4c svg [data-color="1"] {fill: currentcolor;}</style></defs>
@@ -126,16 +128,8 @@ export const services: Service[] = [
     description: 'Serve independent and dependent seniors and their families as they progress through the aging process.',
     details: `
       <p>Our Caregiver Support services provide essential assistance and respite for family caregivers:</p>
-      <ul>
-        <li>Provide respite care to prevent caregiver burnout</li>
-        <li>Offer guidance on caregiving best practices</li>
-        <li>Connect families with community resources</li>
-        <li>Assist with care planning and coordination</li>
-        <li>Provide emotional support and counseling referrals</li>
-        <li>Help navigate long-term care options</li>
-        <li>Coordinate support groups and educational programs</li>
-        <li>Assist with transitioning to different levels of care</li>
-      </ul>
+      <p>Provide support, in a professional and compassionate manner, to assist in relieving stress caused by household and financial tasks, locating and securing resources to support the care recipient and caregiver as they move through the stages and transitions of the illness of care recipient</p>
+      <p>Assist and support Caregiver balancing their roles as delegate and provider. Providing support in managing their own emotional conflict as well as potential intra-family conflicts while developing or maintaining a positive partnership relationship with the care recipient. Provide support and coordination in securing local and community resources to provide programing and coping mechanisms. Assist caregiver(s) in recognizing the stages (both current and future) of the care recipients illness or condition, and encourage planning that includes recognizable decision making benchmarks and financial realities. Coordinate services and equipment that will be needed at home before the care recipient leaves the hospital; including homemakers, companions, live-ins, shoppers, drivers, etc. Support caregiver(s) through the process of locating an appropriate facility, applying for appropriate medical and financial assistance and coordinating the move. Consult with caregivers and family as to phases of disease, particularly Alzheimer’s and dementia, the effects of these diseases to the caregivers and families and support for moving forward. Supporting our Seniors, LLC is fully insured and all records are confidential and maintained securely.</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item1 svg [data-color="1"] {fill: currentcolor;}</style></defs>
     <g>

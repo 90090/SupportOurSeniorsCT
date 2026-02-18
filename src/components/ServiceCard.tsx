@@ -81,7 +81,7 @@ export default function ServiceCard({ title, description, icon, details, imageSr
           onClick={closeModal}
         >
           <div 
-            className="bg-white rounded-lg p-10 max-w-2xl w-full max-h-[85vh] overflow-y-auto relative animate-slideUp"
+            className="bg-white rounded-lg p-10 max-w-4xl w-full max-h-[85vh] overflow-y-auto relative animate-slideUp"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
