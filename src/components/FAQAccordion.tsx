@@ -1,59 +1,73 @@
 import { useState } from 'react';
-import './FAQAccordion.css';
 
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
 }
 
 const faqData: FAQItem[] = [
   {
-    question: 'What services does Supporting Our Seniors provide?',
-    answer: 'We provide comprehensive support services including financial support, medical coordination, household assistance, conservator services, and caregiver support. Our services are tailored to help seniors maintain independence and quality of life while providing peace of mind to their families.',
+    question: 'Why do you need a Senior Advocate ("S.A") / Geriatric Care Manager ("G.C.M") and how can one be helpful?',
+    answer: (
+      <div className="space-y-4">
+        <ul className="list-disc list-outside ml-5 space-y-2">
+          <li>To open communication with healthcare.</li>
+          <li>To help your concerns be heard.</li>
+          <li>To process what goes on with your loved one.</li>
+          <li>To seek requests for care for loved one.</li>
+          <li>To have a support system.</li>
+          <li>To seek out referrals for the patient.</li>
+          <li>To act as a main point of contact for the many calls for coordination, minutia of planning and minimize the stress on the family by communicating the remarkable items to the family in one call.</li>
+          <li>To provide a seasoned network of known professionals that can provide an array of services.</li>
+          <li>To guide you and provide professional advice.</li>
+          <li>To provide clarity of the future beyond the "immediate or emergency" situation. Create stability, a plan and knowledge for moving forward.</li>
+          <li>To ensure accountability for all involved, "keeping watch" and ease that burden on the loved ones.</li>
+        </ul>
+        <p>A SA/GCM can help provide support, experienced knowledge and action in the medical and home setting. They provide knowledge and resources regarding options, service care providers and strategic future planning for your loved one. Coordination of specialist appointments, needed transportation, further medical support systems can be managed and coordinated by the SA/GCM, freeing the family of the stress and burden. The health care system can be overwhelming and complicated to navigate through and the emotions and worry of a loved one can add to the stress. The SA/GCM allows the family to focus on the loved one by leading all coordination and communications and provide constant support and recommendations on the situation and next steps.</p>
+      </div>
+    ),
   },
   {
-    question: 'How do I know if my loved one needs senior support services?',
-    answer: 'Signs that support may be needed include difficulty managing daily tasks, missed appointments, unpaid bills, declining personal hygiene, confusion with medications, isolation, or caregiver burnout. We offer free consultations to assess your specific situation and recommend appropriate services.',
+    question: 'How does a SA/GCM work?',
+    answer: (
+      <div className="space-y-4">
+        <p>After an initial consult, Supporting Our Seniors provides a proposal and draft Service Agreement as a "springboard" in creation of a final agreement that meets the family's goals and expectations. Upon signing of agreement and retaining of Supporting Our Seniors, a Certificate of Insurance endorsed to the client is provided.</p>
+        <p>Typical Actions can include meetings with doctors, facility staff, meeting with the patient, coordination of care and facilities.</p>
+        <p>In some cases, a client may reach out during an emergent and "time is of the essence" situation. Supporting Our Seniors has experience with these situations and is able to fast track the intake process and to "hit the ground running" to provide immediate support to the senior and family.</p>
+        <p>No two situations are alike and there are no cookie cutter scenarios! Supporting Our Seniors approaches each case and situation individually and creatively to create the best support and service to ensure the goals of the senior and family are met.</p>
+      </div>
+    ),
   },
   {
-    question: 'What areas do you serve?',
-    answer: 'We primarily serve the Waterbury, Connecticut area and surrounding communities. However, we may be able to accommodate clients in other areas depending on their specific needs. Please contact us to discuss your location.',
+    question: 'What is a Certified Dementia Practitioner?',
+    answer: (
+      <p>A Certified Dementia Practitioner, or CDP, is someone with a certification demonstrating achievement and specialized training in the areas of Alzheimer's and dementia care. The CDP program recognizes the need for standards in the area of Alzheimer's and dementia education, and it helps improve the services provided by health care professionals and frontline staff. Ongoing continuing education is required to maintain certification.</p>
+    ),
   },
   {
-    question: 'How much do your services cost?',
-    answer: 'Service costs vary depending on the type and frequency of support needed. We offer flexible arrangements and will work with you to create a plan that fits your budget. Contact us for a free consultation and personalized quote based on your specific needs.',
+    question: 'What is a Conservator?',
+    answer: (
+      <div className="space-y-4">
+        <p>A <strong>"conservator of the person"</strong> is appointed by the Probate Court to supervise the personal affairs of an individual who is found by the court to be unable to meet essential requirements for personal needs. These needs may include, but are not limited to, food, clothing, shelter, health care and safety.</p>
+        <p>A <strong>"conservator of the estate"</strong> is appointed by the Probate Court to supervise the finances of an individual who is found by the court to be incapable of managing his or her own finances. This may include, but is not limited to, actions to manage assets, income and public assistance benefits.</p>
+      </div>
+    ),
   },
   {
-    question: 'Are your services covered by insurance or Medicare?',
-    answer: 'Some services may be covered depending on your specific insurance plan. We can help you navigate insurance benefits and understand what coverage may be available. We also work with families to explore funding options including long-term care insurance and veterans benefits.',
+    question: 'Why do people have conservatorships?',
+    answer: (
+      <div className="space-y-4">
+        <p>A conservatorship is a way for someone to assume legal guardianship over an adult. Families often use conservatorships to help deal with the mounting medical, financial and mental health needs of a parent. The status of a conservatorship is dependent on the capacity of the individual to make decisions on their own.</p>
+        <p>Supporting Our Seniors has experience in both Conservatorship of the Person and Estate as well as voluntary, involuntary and contested involuntary Conservatorships. Tamath is also a vetted and approved Regulation 16 Conservator by the State of Connecticut which applies to the compensation of a conservator for a person under conservatorship who is unable to pay for the services of the conservator.</p>
+        <p>If you are considering a Conservatorship for a loved one, Supporting Our Seniors can guide and assist the family/concerned parties of the senior to consider all options and make a decision that is the right fit for the senior and the specific situation.</p>
+      </div>
+    ),
   },
   {
-    question: 'What qualifications does your team have?',
-    answer: 'Our founder, Tamath Rossi, has over 20 years of experience in senior services and 30 years as a paralegal. She previously served as Director of Senior Services for the Town of Southbury and has extensive experience with healthcare coordination, legal matters, and crisis management.',
-  },
-  {
-    question: 'Can you help with legal matters like Power of Attorney or conservatorship?',
-    answer: 'Yes, we have extensive experience with legal matters affecting seniors. While we are not attorneys, we work closely with a network of qualified attorneys and can help coordinate legal services, serve as conservators when needed, and ensure proper documentation and compliance.',
-  },
-  {
-    question: 'How quickly can services begin?',
-    answer: 'We understand that needs can arise suddenly. After an initial consultation, we can often begin services within a few days, depending on the complexity of the situation and service requirements. For urgent situations, we will work to accommodate needs as quickly as possible.',
-  },
-  {
-    question: 'Do you provide 24/7 care?',
-    answer: 'We coordinate support services but do not provide direct 24/7 personal care. However, we can help arrange and manage round-the-clock care through trusted partner agencies if that level of support is needed.',
-  },
-  {
-    question: 'What makes Supporting Our Seniors different from other senior services?',
-    answer: 'Our comprehensive approach combines professional expertise with genuine compassion. We bring together experience in healthcare coordination, legal matters, financial management, and family support. We don\'t just address immediate needs - we help plan for the future and provide ongoing advocacy and coordination.',
-  },
-  {
-    question: 'Can you help with transitioning to assisted living or nursing care?',
-    answer: 'Absolutely. We have extensive knowledge of local facilities and can help assess options, coordinate tours, manage the transition process, and ensure that your loved one receives appropriate care. We also help families understand their options and make informed decisions.',
-  },
-  {
-    question: 'What if our needs change over time?',
-    answer: 'Our services are flexible and can be adjusted as needs evolve. We regularly reassess situations and adapt our support accordingly. Whether needs increase or decrease, we work with families to ensure appropriate levels of assistance at every stage.',
+    question: 'What is a Daily Money Manager?',
+    answer: (
+      <p>A daily money manager is a person who takes over someone's day-to-day financial tasks including reviewing bills, bill paying and reviewing of mail. A variety of people employ daily money managers, ranging from older clients to those simply too busy to maintain total control and accuracy of their financial needs.</p>
+    ),
   },
 ];
 
@@ -65,35 +79,54 @@ export default function FAQAccordion() {
   };
 
   return (
-    <div className="faq-accordion">
-      {faqData.map((faq, index) => (
-        <div 
-          key={index} 
-          className={`faq-item ${openIndex === index ? 'active' : ''}`}
-        >
-          <button
-            className="faq-question"
-            onClick={() => toggleFAQ(index)}
-            aria-expanded={openIndex === index}
+    <div className="max-w-5xl mx-auto w-full px-4">
+      {faqData.map((faq, index) => {
+        const isOpen = openIndex === index;
+        return (
+          <div
+            key={index}
+            className={`bg-white rounded-md mb-3 overflow-hidden transition-shadow duration-300 ${
+              isOpen ? 'shadow-md' : 'shadow-sm hover:shadow-md'
+            }`}
           >
-            <span>{faq.question}</span>
-            <svg
-              className="faq-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
+            <button
+              className={`w-full flex justify-between items-center gap-4 px-5 py-4 md:px-6 md:py-5 text-left font-semibold text-base md:text-lg transition-colors duration-200 ${
+                isOpen
+                  ? 'bg-[var(--color-primary)] text-[var(--color-primary)]'
+                  : 'bg-white text-[var(--color-primary)] hover:bg-[var(--color-bg-alt)]'
+              }`}
+              onClick={() => toggleFAQ(index)}
+              aria-expanded={isOpen}
             >
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
-          <div className="faq-answer">
-            <div className="faq-answer-content">
-              <p>{faq.answer}</p>
+              <span>{faq.question}</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className={`w-5 h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform duration-300 ${
+                  isOpen ? 'rotate-180' : ''
+                }`}
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+
+            {/* Animated answer panel */}
+            <div
+              className={`grid transition-all duration-300 ease-in-out ${
+                isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="px-5 pb-5 pt-4 md:px-6 md:pb-6 text-[var(--color-text)] text-base md:text-[1.0625rem] leading-relaxed">
+                  {faq.answer}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
