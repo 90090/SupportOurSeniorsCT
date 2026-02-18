@@ -1,11 +1,334 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ServiceCard from '../components/ServiceCard';
+import { services, aboutContent } from '../data/content';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Supporting Our Seniors, LLC - Senior Advocate CT">
+  <!-- Hero Section -->
+  <!-- On mobile: background-attachment fixed causes issues, so we use bg-scroll on small screens -->
+  <section id="top" class="relative min-h-[500px] md:min-h-[600px] flex items-end pb-10 md:pb-16 px-5 md:px-8 overflow-hidden">
+    <!-- Background: fixed parallax on md+, plain cover on mobile -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
+      style="background-image: url('/Hero.webp');"
+    ></div>
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-white/50"></div>
+    
+    <!-- Content - full width on mobile, 2/3 on desktop -->
+    <div class="relative z-10 w-full md:max-w-[66%] text-left">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-[var(--color-accent)] leading-tight drop-shadow-[2px_4px_8px_rgba(0,0,0,1)]">
+        Experience & Compassion
+      </h1>
+      <p class="text-base md:text-xl font-semibold leading-relaxed mb-6 md:mb-8 text-black max-w-[700px]">
+        Supporting our Seniors, LLC provides support services to seniors and their families 
+        to assist in navigating the aging process and securing measures to enable their loved 
+        one to age in place safely, successfully and for as long as possible.
+      </p>
+      <a 
+        href="#about" 
+        class="inline-flex items-center gap-3 px-6 py-3 bg-[var(--color-purple-dark)] text-white rounded-lg font-semibold text-base transition-all duration-300 hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-xl"
+      >
+        Read More
+        <svg viewBox="0 0 60 60" height="18" width="18" class="fill-current transition-transform duration-300 group-hover:translate-x-1">
+          <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-14 md:py-20 bg-[var(--color-bg-alt)]">
+    <div class="container mx-auto px-4">
+      <!-- Services Header -->
+      <div class="flex flex-col items-center mb-10 md:mb-16">
+        <svg 
+          preserveAspectRatio="xMidYMid meet" 
+          viewBox="18.597 25 162.806 150" 
+          height="90" 
+          width="90" 
+          xmlns="http://www.w3.org/2000/svg"
+          class="mb-4"
+        >
+          <path 
+            d="M149.357 26.739c-18.461-4.98-37.801 1.362-49.327 15.558C87.041 25.872 66.55 22.399 50.721 26.67c-19.814 5.353-32.124 21.657-32.124 42.55 0 27.975 27.736 55.079 62.852 89.394 4.977 4.867 10.107 9.88 15.326 15.057.891.885 2.06 1.329 3.225 1.329s2.334-.444 3.225-1.329a2857.6 2857.6 0 0 1 15.302-15.031c35.128-34.326 62.876-61.437 62.876-89.42 0-20.864-12.28-37.14-32.046-42.481zm-37.477 62.7l2.304 13.421-12.053-6.336c-.668-.349-1.401-.525-2.131-.525s-1.463.176-2.131.525l-12.053 6.336 2.304-13.421a4.583 4.583 0 0 0-1.317-4.053l-9.752-9.505 13.478-1.958a4.575 4.575 0 0 0 3.445-2.504L100 59.208l6.027 12.211a4.579 4.579 0 0 0 3.445 2.504l13.478 1.958-9.752 9.505a4.584 4.584 0 0 0-1.318 4.053zm.248 62.653A3274.367 3274.367 0 0 0 100 163.981c-4.125-4.071-8.187-8.038-12.151-11.916-33.576-32.809-60.096-58.724-60.096-82.845 0-19.805 13.099-30.398 25.355-33.709a39.835 39.835 0 0 1 10.354-1.356c11.141 0 23.059 4.596 30.87 15.85l-7.503 15.203-20.276 2.948a4.576 4.576 0 0 0-2.537 7.809L78.69 90.262l-3.466 20.193a4.58 4.58 0 0 0 1.821 4.48 4.594 4.594 0 0 0 4.822.349L100 105.749l18.133 9.535a4.587 4.587 0 0 0 4.822-.348 4.58 4.58 0 0 0 1.821-4.48l-3.466-20.193 14.673-14.297a4.58 4.58 0 0 0-2.537-7.809l-20.276-2.948-7.496-15.189c10.319-14.758 28.293-17.951 41.295-14.44 15.829 4.274 25.277 16.852 25.277 33.641.001 24.126-26.528 50.05-60.118 82.871z" 
+            fill="#35005C"
+          />
+        </svg>
+        
+        <h3 class="text-xl md:text-2xl text-[var(--color-purple-dark)] mb-2">SERVICES</h3>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-purple-dark)] text-center">WHAT WE DO</h2>
+      </div>
+      
+      <!-- Services Grid -->
+      <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+        {services.map((service) => (
+          <ServiceCard 
+            title={service.title}
+            description={service.description}
+            icon={service.icon}
+            details={service.details}
+            imageSrc={service.imageSrc}
+            client:visible
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-14 md:py-20 bg-[var(--color-primary)] text-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-12 items-start max-w-7xl mx-auto">
+        <!-- Left: Text Content -->
+        <div class="flex-1 w-full">
+          <!-- Header -->
+          <div class="flex items-center gap-4 mb-8">
+            <svg 
+              preserveAspectRatio="xMidYMid meet" 
+              viewBox="18.597 25 162.806 150" 
+              height="60" 
+              width="60" 
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-shrink-0 md:h-20 md:w-20"
+            >
+              <path 
+                d="M149.357 26.739c-18.461-4.98-37.801 1.362-49.327 15.558C87.041 25.872 66.55 22.399 50.721 26.67c-19.814 5.353-32.124 21.657-32.124 42.55 0 27.975 27.736 55.079 62.852 89.394 4.977 4.867 10.107 9.88 15.326 15.057.891.885 2.06 1.329 3.225 1.329s2.334-.444 3.225-1.329a2857.6 2857.6 0 0 1 15.302-15.031c35.128-34.326 62.876-61.437 62.876-89.42 0-20.864-12.28-37.14-32.046-42.481zm-37.477 62.7l2.304 13.421-12.053-6.336c-.668-.349-1.401-.525-2.131-.525s-1.463.176-2.131.525l-12.053 6.336 2.304-13.421a4.583 4.583 0 0 0-1.317-4.053l-9.752-9.505 13.478-1.958a4.575 4.575 0 0 0 3.445-2.504L100 59.208l6.027 12.211a4.579 4.579 0 0 0 3.445 2.504l13.478 1.958-9.752 9.505a4.584 4.584 0 0 0-1.318 4.053zm.248 62.653A3274.367 3274.367 0 0 0 100 163.981c-4.125-4.071-8.187-8.038-12.151-11.916-33.576-32.809-60.096-58.724-60.096-82.845 0-19.805 13.099-30.398 25.355-33.709a39.835 39.835 0 0 1 10.354-1.356c11.141 0 23.059 4.596 30.87 15.85l-7.503 15.203-20.276 2.948a4.576 4.576 0 0 0-2.537 7.809L78.69 90.262l-3.466 20.193a4.58 4.58 0 0 0 1.821 4.48 4.594 4.594 0 0 0 4.822.349L100 105.749l18.133 9.535a4.587 4.587 0 0 0 4.822-.348 4.58 4.58 0 0 0 1.821-4.48l-3.466-20.193 14.673-14.297a4.58 4.58 0 0 0-2.537-7.809l-20.276-2.948-7.496-15.189c10.319-14.758 28.293-17.951 41.295-14.44 15.829 4.274 25.277 16.852 25.277 33.641.001 24.126-26.528 50.05-60.118 82.871z" 
+                fill="white"
+              />
+            </svg>
+            
+            <div>
+              <h3 class="text-lg md:text-xl text-[var(--color-accent)] mb-1">ABOUT US</h3>
+              <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">WHO WE ARE</h2>
+            </div>
+          </div>
+          
+          <!-- Text Content -->
+          <div class="text-base md:text-lg leading-relaxed space-y-4" set:html={aboutContent.content} />
+        </div>
+        
+        <!-- Right: Image Column — horizontal scroll on mobile, vertical stack on desktop -->
+        <div class="w-full lg:w-80 xl:w-96">
+          <!-- Mobile: horizontal scrolling strip -->
+          <div class="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 snap-x snap-mandatory lg:snap-none">
+            <div class="bg-white/10 rounded-lg overflow-hidden flex-shrink-0 w-72 h-56 sm:w-80 sm:h-64 lg:w-full lg:h-64 snap-start">
+              <img src="/about/about1.webp" alt="About us" class="w-full h-full object-cover" />
+            </div>
+            <div class="bg-white/10 rounded-lg overflow-hidden flex-shrink-0 w-72 h-56 sm:w-80 sm:h-64 lg:w-full lg:h-64 snap-start">
+              <img src="/about/about2.webp" alt="About us" class="w-full h-full object-cover" />
+            </div>
+            <div class="bg-white/10 rounded-lg overflow-hidden flex-shrink-0 w-72 h-56 sm:w-80 sm:h-64 lg:w-full lg:h-64 snap-start">
+              <img src="/about/about3.webp" alt="About us" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Details Section -->
+  <section id="details" class="py-14 md:py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-12 items-start max-w-7xl mx-auto">
+        <!-- Image: full width on mobile, half on desktop -->
+        <div class="w-full lg:w-1/2">
+          <div class="bg-gray-200 rounded-lg overflow-hidden sm:h-80 md:h-[500px] lg:h-[600px]">
+            <img src="/about/MoreInformation.webp" alt="More details" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        
+        <!-- Right: Text Content -->
+        <div class="w-full lg:w-1/2">
+          <!-- Header -->
+          <div class="flex items-center gap-4 mb-8">
+            <svg 
+              preserveAspectRatio="xMidYMid meet" 
+              viewBox="18.597 25 162.806 150" 
+              height="60" 
+              width="60" 
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-shrink-0 md:h-20 md:w-20"
+            >
+              <path 
+                d="M149.357 26.739c-18.461-4.98-37.801 1.362-49.327 15.558C87.041 25.872 66.55 22.399 50.721 26.67c-19.814 5.353-32.124 21.657-32.124 42.55 0 27.975 27.736 55.079 62.852 89.394 4.977 4.867 10.107 9.88 15.326 15.057.891.885 2.06 1.329 3.225 1.329s2.334-.444 3.225-1.329a2857.6 2857.6 0 0 1 15.302-15.031c35.128-34.326 62.876-61.437 62.876-89.42 0-20.864-12.28-37.14-32.046-42.481zm-37.477 62.7l2.304 13.421-12.053-6.336c-.668-.349-1.401-.525-2.131-.525s-1.463.176-2.131.525l-12.053 6.336 2.304-13.421a4.583 4.583 0 0 0-1.317-4.053l-9.752-9.505 13.478-1.958a4.575 4.575 0 0 0 3.445-2.504L100 59.208l6.027 12.211a4.579 4.579 0 0 0 3.445 2.504l13.478 1.958-9.752 9.505a4.584 4.584 0 0 0-1.318 4.053zm.248 62.653A3274.367 3274.367 0 0 0 100 163.981c-4.125-4.071-8.187-8.038-12.151-11.916-33.576-32.809-60.096-58.724-60.096-82.845 0-19.805 13.099-30.398 25.355-33.709a39.835 39.835 0 0 1 10.354-1.356c11.141 0 23.059 4.596 30.87 15.85l-7.503 15.203-20.276 2.948a4.576 4.576 0 0 0-2.537 7.809L78.69 90.262l-3.466 20.193a4.58 4.58 0 0 0 1.821 4.48 4.594 4.594 0 0 0 4.822.349L100 105.749l18.133 9.535a4.587 4.587 0 0 0 4.822-.348 4.58 4.58 0 0 0 1.821-4.48l-3.466-20.193 14.673-14.297a4.58 4.58 0 0 0-2.537-7.809l-20.276-2.948-7.496-15.189c10.319-14.758 28.293-17.951 41.295-14.44 15.829 4.274 25.277 16.852 25.277 33.641.001 24.126-26.528 50.05-60.118 82.871z" 
+                fill="#35005C"
+              />
+            </svg>
+            
+            <div>
+              <h3 class="text-lg md:text-xl text-[var(--color-purple-dark)] mb-1">MORE INFORMATION</h3>
+              <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-purple-dark)]">MORE DETAILS</h2>
+            </div>
+          </div>
+          
+          <!-- Text Content -->
+          <div class="text-sm md:text-base leading-relaxed space-y-4 text-[var(--color-text)]">
+            <p><strong>Scheduling:</strong> Services are offered on a short or long term basis, personally structured and scheduled to meet the specific requirements of the individual client. In addition, the services provided can be adjusted or expanded as the client's progressive financial and personal requirements change.</p>
+            
+            <p><strong>Fees:</strong> Fees can be structured in a number of ways including hourly, daily, monthly and will be fully discussed and worked through prior to service to ensure clarity and the highest level of comfort for the client and family.</p>
+            
+            <p>An initial consultation with the client and family to determine and discuss challenges, family dynamics, needs and expectations of the client and family always provided.</p>
+            
+            <p>A Service Agreement is provided to itemize specific expectations and details associated with the plan in order to alleviate any confusion and promote the highest level of comfort for the client and family.</p>
+            
+            <p>Proof of Insurance is provided prior to service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Image Section -->
+  <!-- bg-fixed (parallax) is broken on iOS/mobile — use bg-scroll with a taller fixed height on small screens -->
+  <section 
+    class="h-48 sm:h-64 md:h-[400px] bg-scroll md:bg-fixed bg-cover bg-center" 
+    style="background-image: url('/ParallaxImage.webp');"
+  >
+    <div class="w-full h-full"></div>
+  </section>
+
+  <!-- Affiliations Section -->
+  <section class="py-14 md:py-20 bg-[var(--color-bg-alt)]">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[var(--color-purple-dark)] mb-10 md:mb-16">
+        Affiliations, Memberships, Certifications
+      </h2>
+      
+      <!-- Responsive Grid: 1 col mobile, 2 col md+ -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 md:mb-16">
+        <div class="flex items-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <p class="text-base md:text-lg text-[var(--color-text)]">Certified Dementia Practitioner 2018 to present (License Number: 246777)</p>
+        </div>
+        
+        <div class="flex items-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <p class="text-base md:text-lg text-[var(--color-text)]">CT Probate Court certified Conservator (2022) Connecticut</p>
+        </div>
+        
+        <div class="flex flex-col justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <p class="text-base md:text-lg text-[var(--color-text)]">Association of Senior Center Personnel</p>
+          <p class="text-base md:text-lg text-[var(--color-text)]">Member 2016 - 2022</p>
+          <p class="text-base md:text-lg text-[var(--color-text)]">First Vice President 2018 - 2022</p>
+        </div>
+        
+        <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <img src="/certifications/AADMM.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+        </div>
+        
+        <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <img src="/certifications/ACOA.webp" alt="Affiliation" class="max-h-28 md:max-h-32 w-auto object-contain" />
+        </div>
+        
+        <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <img src="/certifications/AIM.webp" alt="Affiliation" class="max-h-28 md:max-h-32 w-auto object-contain" />
+        </div>
+
+        <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <img src="/certifications/NCCDP.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+        </div>
+
+        <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <img src="/certifications/NCOA.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+        </div>
+
+        <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
+          <img src="/certifications/SSA.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+        </div>
+      </div>
+      
+      <p class="text-sm text-center text-[var(--color-text)] max-w-3xl mx-auto">
+        Founded in 2018 by Tamath and fellow colleagues Jade Stoltz, Director of the Jewish Federation of Western Connecticut and Southbury Attorney James J. Flaherty, Jr. of Chipman Mazzucco Emerson LLC.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-14 md:py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-6xl mx-auto">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-primary)] mb-3 md:mb-4">Get in Touch</h2>
+          <p class="text-base md:text-lg mb-6 md:mb-8 text-[var(--color-text)]">We're here to help. Contact us today for a free consultation.</p>
+          
+          <div class="space-y-6">
+            <!-- Phone -->
+            <div class="flex gap-4 md:gap-6 items-start">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 md:w-10 md:h-10 text-[var(--color-primary)] flex-shrink-0">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <div>
+                <h4 class="text-base md:text-lg font-semibold text-[var(--color-primary)] mb-1">Phone</h4>
+                <a href="tel:+12039105998" class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors text-sm md:text-base">
+                  (203) 910-5998
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact image: constrained height on mobile -->
+            <div class="rounded-lg overflow-hidden sm:h-80 md:h-160 lg:h-128">
+              <img src="/contact/ContactUs.webp" alt="Contact Us" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white p-6 md:p-10 rounded-lg shadow-lg border border-gray-100">
+          <form class="space-y-5 md:space-y-6">
+            <div>
+              <label for="name" class="block mb-2 font-semibold text-[var(--color-primary)] text-sm md:text-base">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm md:text-base"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block mb-2 font-semibold text-[var(--color-primary)] text-sm md:text-base">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm md:text-base"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block mb-2 font-semibold text-[var(--color-primary)] text-sm md:text-base">Phone</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm md:text-base"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="block mb-2 font-semibold text-[var(--color-primary)] text-sm md:text-base">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required 
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none text-sm md:text-base"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full px-8 py-3 md:py-4 bg-[var(--color-primary)] text-white rounded-lg text-base md:text-lg font-semibold transition-all duration-300 hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-lg"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

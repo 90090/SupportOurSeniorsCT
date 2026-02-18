@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FAQAccordion from '../components/FAQAccordion';
+---
+
+<Layout 
+  title="FAQ - Supporting Our Seniors, LLC"
+  description="Frequently asked questions about our senior support services"
+>
+  <section class="faq-hero">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about our services</p>
+    </div>
+  </section>
+
+  <section class="faq-content">
+    <div class="container">
+      <FAQAccordion client:load />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .faq-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .faq-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .faq-hero p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+  }
+
+  .faq-content {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .faq-hero {
+      padding: 3rem 1.5rem;
+    }
+
+    .faq-content {
+      padding: 3rem 0;
+    }
+  }
+</style>

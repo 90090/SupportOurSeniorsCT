@@ -1,0 +1,38 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-[var(--color-primary)] text-[var(--color-text-light)] pt-12 pb-4 mt-16">
+  <div class="max-w-6xl mx-auto px-8 sm:px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+      
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Supporting Our Seniors, LLC</h3>
+        <p class="text-md leading-relaxed">
+          Supporting Our Seniors, LLC is fully insured and all records are confidential and maintained securely. Serving New Haven, Fairfield and Litchfield Counties – Fully insured – serving seniors remotely in their homes and in our Southbury office.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#services" class="text-[var(--color-text-light)] hover:text-[var(--color-accent)] transition-colors duration-200">Services</a></li>
+          <li><a href="#about" class="text-[var(--color-text-light)] hover:text-[var(--color-accent)] transition-colors duration-200">About Us</a></li>
+          <li><a href="/faq" class="text-[var(--color-text-light)] hover:text-[var(--color-accent)] transition-colors duration-200">FAQ</a></li>
+          <li><a href="#contact" class="text-[var(--color-text-light)] hover:text-[var(--color-accent)] transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+        <p class="text-md">
+          Phone: <a href="tel:+12039105998" class="text-[var(--color-text-light)] hover:text-[var(--color-text-accent)] transition-color duration-200">(203) 910-5998</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/20 pt-6 text-center">
+      <p class="text-[0.9rem]">&copy; {currentYear} Supporting Our Seniors, LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

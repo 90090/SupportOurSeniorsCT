@@ -1,0 +1,13 @@
+---
+import Navigation from './Navigation';
+---
+<header class="sticky top-0 z-[1000] bg-[var(--color-purple-dark)] shadow-[var(--shadow-sm)] transition-all duration-300">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-4 py-3 flex justify-center items-center gap-12 max-[968px]:justify-between max-[968px]:gap-0">
+    <div class="logo">
+      <a href="/">
+        <img src="/Logo.webp" alt="Supporting Our Seniors LLC" class="!h-[70px] !w-auto" />
+      </a>
+    </div>
+    <Navigation client:load />
+  </div>
+</header>
