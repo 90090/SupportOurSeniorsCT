@@ -10,13 +10,36 @@ import FAQAccordion from '../components/FAQAccordion';
   <section class="faq-hero">
     <div class="container">
       <h1>Frequently Asked Questions</h1>
-      <p>Find answers to common questions about our services</p>
+      <p>We understand that navigating senior care and support can feel overwhelming. Below are
+      answers to some of the most common questions families ask when considering senior
+      advocacy services.</p>
     </div>
   </section>
 
   <section class="faq-content">
     <div class="container">
       <FAQAccordion client:load />
+    </div>
+  </section>
+
+  <section class="py-14 md:py-20 bg-[var(--color-bg-alt)]">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-purple-dark)] mb-4">
+        Still Have Questions?
+      </h2>
+      <p class="text-base md:text-lg leading-relaxed text-[var(--color-text)] mb-8">
+        If you don't see your question answered here, we encourage you to reach out. Schedule a 
+        consultation and learn how compassionate senior advocacy can support you and your loved ones.
+      </p>
+      <a 
+        href="/#contact"
+        class="inline-flex items-center gap-2 px-7 py-3.5 bg-[var(--color-accent)] text-white rounded-lg font-semibold text-base transition-all duration-300 hover:bg-[var(--color-purple-dark)] hover:-translate-y-1 hover:shadow-lg"
+      >
+        Contact Us
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
     </div>
   </section>
 </Layout>

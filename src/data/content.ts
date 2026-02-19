@@ -13,25 +13,21 @@ export const services: Service[] = [
     title: 'Financial Support Services',
     description: 'Determine current cash needs. Perform Basic Budgeting. Establish record-keeping systems for financial transactions.',
     details: `
-      <p>Our Financial Support Services help seniors and their families manage financial matters with confidence and clarity:</p>
+      <p>Managing finances can become overwhelming with age and/or mental health challenges,
+      especially when bills, benefits, and paperwork start to pile up. Our Daily Money
+      Management and financial support services are designed to protect independence, reduce
+      errors, and give families peace of mind. We help with:</p>
       <ul>
-        <li>Process all mail</li>
-        <li>Determine current cash needs</li>
-        <li>Perform Basic Budgeting</li>
-        <li>Establish record-keeping systems for financial transactions</li>
-        <li>Deposit Checks</li>
-        <li>Pay monthly bills reconcile checkbooks</li>
-        <li>Prepare yearend tax data, make estimated tax payments</li>
-        <li>Assist in review and update insurance coverages</li>
-        <li>Coordinate services necessary to maintain home</li>
-        <li>Submit medical insurance claims and appeals as appropriate</li>
-        <li>Inventory household items and review insurance update needs before outside help is hired.</li>
-        <li>Coordinate home health care (live ins, aides, homemaker-health aides) - See also Medical Services</li>
-        <li>Coordinate and submit tax documentation to accountant for quarterly and annual tax returns (State and Federal), make quarterly payments</li>
-        <li>Coordinate financial affairs including liaison with brokers, accountants, attorneys and trust officers.</li>
-        <li>Review reports from brokers and trustees</li>
-        <li>Personal status, Financial and other specific reports will be provided to accountants, lawyers, trustees, brokers, family members or others AS SPECIFIED BY THE CLIENT. All other client matters are kept in the strictest confidence.</li>
+        <li>● Bill paying and expense organization</li>
+        <li>● Budgeting and cash-flow planning</li>
+        <li>● Organizing financial documents and records</li>
+        <li>● Reviewing insurance statements and recurring expenses</li>
+        <li>● Identifying potential financial risks or concerns</li>
+        <li>● Managing the recovery from fraud instances and ensuring best measures are in place to prevent future occurrences.</li>
       </ul>
+      <p>Our role is not to replace legal or financial advisors, but to act as a trusted advocate —
+      ensuring nothing falls through the cracks and that seniors understand what is happening with
+      their money.</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-j9r9uz7e svg [data-color="1"] {fill: #2B074D;}</style></defs>
     <g>
@@ -51,17 +47,20 @@ export const services: Service[] = [
     title: 'Medical Support Services',
     description: 'Provide support, in a professional and compassionate manner, to assist in relieving stress caused by household and financial tasks.',
     details: `
-      <p>Our Medical Support Services provide comprehensive assistance to help seniors navigate healthcare complexities:</p>
-      <p>Serve independent and dependent seniors and their families as they progress through the aging process, transitions and growing needs that brings, while maintaining as much independence and autonomy as each situation allows.</p>
+      <p>Healthcare can be confusing, time-consuming, and emotionally draining for seniors and
+      caregivers alike. We serve as an advocate and support system to help clients navigate
+      medical care with confidence.</p>
+      <p>Medical support services include:</p>
       <ul>
-        <li>Coordinate community-based services to maintain or improve independent living.</li>
-        <li>Coordinate home/health care needs (see also Financial Services)</li>
-        <li>Coordinate meal delivery or preparation, in home and home-care services such as housekeepers, aides, companion, live-ins, shoppers and drivers. Contract for independent home service contractors.</li>
-        <li>Coordinate Insurance support and mediation when needed</li>
-        <li>Assist with medical appointments: act as liaison to family member to oversee appointment, share concerns with doctor of family members, transcribe instructions and reports by doctors and report back to family</li>
-        <li>Provide support on long term care insurance, retirement communities, assisted living and convalescent home facilities.</li>
-        <li>Coordinate the plan and support for Medicaid (Title XIX) benefits Assist in phasing in the next level of care/living. Coordinate the move, arrange for handling and dispersal of cherished possessions, antiques, collectibles; prepare home for sale; and help the dependent senior client or appropriate family member secure the next level of care. When requested and authorized, liaison with attorneys, doctors, family etc. Work as an advocate, protector and/or surrogate for the client. Serve as Conservator for the client with court approval.</li>
+        <li>● Attending medical appointments as an advocate</li>
+        <li>● Taking notes and helping interpret medical information</li>
+        <li>● Coordinating communication between providers</li>
+        <li>● Assisting with medication organization and reminders</li>
+        <li>● Helping families understand care recommendations</li>
       </ul>
+      <p>Our focus is ensuring seniors feel heard, supported, and empowered when it comes to their
+      health and taking the responsibilities from family members so they may focus on what matters
+      most.</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-l8lsk95n svg [data-color="1"] {fill: currentcolor;}</style></defs>
     <g>
@@ -78,10 +77,18 @@ export const services: Service[] = [
     title: 'Household Support Services',
     description: 'Serve independent and dependent seniors living at home who have become overwhelmed or unable to maintain their household.',
     details: `
-      <p>Our Household Support Services help seniors maintain their independence and quality of life at home:</p>
-      <p>Serve independent and dependent seniors living at home who have become overwhelmed or unable to keep up with the daily tasks required in preserving the value of the home. Through anticipating and acting upon all possible needs to keep the home safe and well maintained.</p>
-      <p>Assist in review and update insurance coverages. Coordinate services necessary to maintain home. Assess safety risks within home, create plan and proposed budget for safety modifications. Schedule, coordinate and oversee all update work to achieve safety measures. Identify “handicap living” requirements within the residence (ie wider doorways, showers etc.) Coordinate with contractors to oversee projects. Inventory household items and review insurance update needs before outside help is hired.</p>
-      <p>See also “Financial Services” list</p>
+      <p>A safe, organized home environment is essential for aging in place. We assist with the day-to-
+      day tasks that can become challenging over time — helping seniors remain comfortable and
+      independent in their own homes.</p>
+      <p>Household support map include:</p>
+      <ul>
+        <li>● Coordinating home maintenance and repairs</li>
+        <li>● Organizing paperwork, mail, and household systems</li>
+        <li>● Assisting with errands and appointments</li>
+        <li>● Helping create routines that support daily living</li>
+      </ul>
+      <p>This service is ideal for seniors who want to stay at home but need extra support managing
+      household responsibilities.</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-j9r9uxns svg [data-color="1"] {fill: currentcolor;}
 #comp-l8j3bmnb__item-j9r9uxns svg [data-color="2"] {fill: currentcolor;}</style></defs>
@@ -103,17 +110,24 @@ export const services: Service[] = [
     title: 'Conservator Services',
     description: 'Serve as a Conservator in cases including: when a Power of Attorney does not exist, there is no immediate family, or family is unable to serve.',
     details: `
-      <p>Our Conservator Services provide legal representation and care management when families need professional assistance:</p>
+      <p>When conservatorship becomes necessary, families are often navigating one of the most
+      difficult and emotional decisions of their lives. Supporting Our Seniors provides steady,
+      experienced guidance to ensure responsibilities are handled properly, compassionately, and
+      in full compliance with Probate Court requirements.</p>
+      <p>Whether serving directly as Conservator or supporting a family member in that role, we provide:</p>
       <ul>
-        <li>Serve independent and dependent seniors and their families as they progress through the aging process, transitions and growing needs that brings, while maintaining as much independence and autonomy as each situation allows.</li>
-        <li>Coordinate community-based services to maintain or improve independent living.</li>
-        <li>Coordinate home/health care needs (see also Financial Services)</li>
-        <li>Coordinate meal delivery or preparation, in home and home-care services such as housekeepers, aides, companion, live-ins, shoppers and drivers. Contract for independent home service contractors.</li>
-        <li>Coordinate Insurance support and mediation when needed</li>
-        <li>Assist with medical appointments: act as liaison to family member to oversee appointment, share concerns with doctor of family members, transcribe instructions and reports by doctors and report back to family</li>
-        <li>Provide support on long term care insurance, retirement communities, assisted living and convalescent home facilities.</li>
-        <li>Coordinate the plan and support for Medicaid (Title XIX) benefits Assist in phasing in the next level of care/living. Coordinate the move, arrange for handling and dispersal of cherished possessions, antiques, collectibles; prepare home for sale; and help the dependent senior client or appropriate family member secure the next level of care. When requested and authorized, liaison with attorneys, doctors, family etc. Work as an advocate, protector and/or surrogate for the client. Serve as Conservator for the client with court approval.</li>
+        <li>● Experienced, court-informed leadership in all aspects of conservatorship</li>
+        <li>● Management of Probate Court filings, reporting, and compliance</li>
+        <li>● Thoughtful financial oversight and decision-making in the client's best interest</li>
+        <li>● Day-to-day coordination and documentation to ensure continuity of care</li>
+        <li>● Organization and maintenance of financial and personal records</li>
+        <li>● Clear, respectful communication among the conserved individual, family members, medical providers, and financial professionals</li>
+        <li>● Hands-on advocacy to safeguard the dignity, well-being, and rights of the individual</li>
+        <li>● Responsible financial management with timely and accurate reporting to the Probate Court</li>
       </ul>
+      <p>Our approach is relationship-based and deeply personal. We work directly with the conserved
+      individual whenever possible and maintain open communication with families — ensuring
+      every decision reflects care, accountability, and respect.</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-lsot4c4c svg [data-color="1"] {fill: currentcolor;}</style></defs>
     <g>
@@ -124,12 +138,29 @@ export const services: Service[] = [
   },
   {
     id: 'caregiver-support',
-    title: 'Caregiver Support',
+    title: 'Family Caregiver Support',
     description: 'Serve independent and dependent seniors and their families as they progress through the aging process.',
     details: `
-      <p>Our Caregiver Support services provide essential assistance and respite for family caregivers:</p>
-      <p>Provide support, in a professional and compassionate manner, to assist in relieving stress caused by household and financial tasks, locating and securing resources to support the care recipient and caregiver as they move through the stages and transitions of the illness of care recipient</p>
-      <p>Assist and support Caregiver balancing their roles as delegate and provider. Providing support in managing their own emotional conflict as well as potential intra-family conflicts while developing or maintaining a positive partnership relationship with the care recipient. Provide support and coordination in securing local and community resources to provide programing and coping mechanisms. Assist caregiver(s) in recognizing the stages (both current and future) of the care recipients illness or condition, and encourage planning that includes recognizable decision making benchmarks and financial realities. Coordinate services and equipment that will be needed at home before the care recipient leaves the hospital; including homemakers, companions, live-ins, shoppers, drivers, etc. Support caregiver(s) through the process of locating an appropriate facility, applying for appropriate medical and financial assistance and coordinating the move. Consult with caregivers and family as to phases of disease, particularly Alzheimer’s and dementia, the effects of these diseases to the caregivers and families and support for moving forward. Supporting our Seniors, LLC is fully insured and all records are confidential and maintained securely.</p>
+      <p>Caring for an aging loved one can be rewarding — but also exhausting. Our family caregiver
+      support services are designed to reduce burnout, provide guidance, and ensure caregivers
+      are not navigating this journey alone.</p>
+      <p>Caregiver support may include:</p>
+      <ul>
+        <li>● Guidance and education on aging-related challenges</li>
+        <li>● Help coordinating care and services</li>
+        <li>● Emotional support and problem-solving</li>
+        <li>● Acting as a liaison between caregivers and professionals</li>
+      </ul>
+      <p>By supporting caregivers, we help create healthier, more sustainable care environments.</p>
+      <p>A complimentary consultations with the client and family is
+        always provided to determine and discuss challenges, family dynamics, needs
+        and expectations of the client and family. This complimentary session
+        allows us to provide the most robust plan moving forward and is individually created based
+        upon the situation.</p>
+      <p>Services are offered on a short or long term basis, personally structured and scheduled to
+          meet the specific requirements of the individual client. In addition, the services provided can
+          be adjusted or expanded as the client's progressive financial and personal requirements
+          evolve</p>
     `,
     icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item1 svg [data-color="1"] {fill: currentcolor;}</style></defs>
     <g>
@@ -139,22 +170,49 @@ export const services: Service[] = [
     imageSrc: '/servicecards/CaregiverSupport.webp',
   },
   {
-    id: 'get-in-touch',
-    title: 'Get in Touch',
-    description: 'We are here to help. If you need assistance please get in touch with us anytime.',
+    id: 'life-transition',
+    title: 'Downsizing and Life Transition Services',
+    description: 'Help Seniors navigate the emotional and logistical challenges of downsizing, moving, or transitioning to a new living situation.',
     details: `
-      <p>Contact us today to learn more about how we can help you or your loved one navigate the aging process with dignity and support.</p>
-      <p><strong>Phone:</strong> (123) 456-7890</p>
-      <p><strong>Email:</strong> info@supportingourseniorsct.com</p>
-      <p><strong>Location:</strong> Waterbury, Connecticut</p>
-      <p>We offer free initial consultations to discuss your specific needs and how our services can best support you.</p>
+      <p>Making the decision of when to downsize — and determining the best path forward — can feel
+        overwhelming. At Supporting Our Seniors, we provide steady guidance, thoughtful planning,
+        and hands-on assistance from beginning to end, ensuring each transition is handled with
+        clarity, dignity, and care.</p>
+      <p>Since our founding in 2022, we have successfully guided more than thirty families through
+        downsizing and major life transitions — including the coordinated sale of over a dozen
+        properties as part of comprehensive transition planning. Our experience allows us to
+        anticipate challenges, protect financial interests, and ensure each step is managed
+        thoughtfully and efficiently.</p>
+      <p>Our services include:</p>
+      <ul>
+        <li>● Comprehensive assessment to provide professional guidance based on each client's unique circumstances, goals, and financial considerations</li>
+        <li>● Personalized transition planning, whether remaining at home with modifications,
+            seeking a smaller residence, exploring independent living, assisted living, or memory
+            care</li>
+        <li>● Financial transition guidance to support informed and confident decision-making</li>
+        <li>● Coordination of trusted professionals, including realtors, contractors, clean-out
+            services, and other necessary providers</li>
+        <li>● Oversight of the entire process to ensure clients retain the maximum financial benefit
+            available during the transition</li>
+      </ul>
+      <p>We understand that downsizing is more than a move — it is a significant life change. Our role
+      is to reduce stress, provide clarity, and safeguard both emotional and financial well-being
+      every step of the way.</p>
     `,
-    icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg"><defs><style>#comp-l8j3bmnb__item-lst5qgnh svg [data-color="1"] {fill: currentcolor;}</style></defs>
-    <g>
-        <path d="M117.082 180c-16.588 0-33.176-6.314-45.805-18.943l-32.333-32.333c-25.258-25.258-25.258-66.354 0-91.612a3.81 3.81 0 0 1 5.388 0l32.333 32.333a3.809 3.809 0 0 1 0 5.389L65.888 85.613a11.36 11.36 0 0 0-3.352 8.083 11.36 11.36 0 0 0 3.352 8.083l32.333 32.333c4.458 4.458 11.709 4.459 16.166 0l10.778-10.778a3.81 3.81 0 0 1 5.388 0l32.333 32.333a3.809 3.809 0 0 1 0 5.389C150.259 173.686 133.671 180 117.082 180zM41.727 45.284c-19.642 22.426-18.775 56.67 2.605 78.05l32.333 32.333c21.381 21.381 55.625 22.246 78.05 2.606l-26.856-26.856-8.084 8.084c-7.43 7.429-19.515 7.427-26.943 0l-32.333-32.333a18.93 18.93 0 0 1-5.585-13.473c0-5.087 1.984-9.871 5.585-13.473l8.083-8.083-26.855-26.855z" fill="currentcolor" data-color="1"></path>
-        <path d="M176.189 88.59a3.81 3.81 0 0 1-3.811-3.811c0-31.517-25.641-57.158-57.158-57.158a3.81 3.81 0 1 1 .001-7.621C150.94 20 180 49.06 180 84.779a3.81 3.81 0 0 1-3.811 3.811z" fill="currentcolor" data-color="1"></path>
-        <path d="M145.705 88.59a3.81 3.81 0 0 1-3.811-3.811c0-14.708-11.966-26.674-26.673-26.674a3.81 3.81 0 1 1 0-7.622c18.91 0 34.294 15.385 34.294 34.295a3.81 3.81 0 0 1-3.81 3.812z" fill="currentcolor" data-color="1"></path>
-    </g>
+    icon: `<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+  <g fill="currentcolor" data-color="1">
+    <!-- Left (big) house -->
+    <path d="M10 98l32-32 32 32v52H10z"/>
+    <rect x="24" y="118" width="22" height="32" rx="1"/>
+
+    <!-- Arrow -->
+    <path d="M78 114 h44" stroke="currentcolor" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M112 102 l14 12 -14 12" stroke="currentcolor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Right (smaller) house -->
+    <path d="M130 112l26-26 26 26v38h-52z"/>
+    <rect x="143" y="128" width="16" height="22" rx="1"/>
+  </g>
 </svg>`,
     imageSrc: '/servicecards/GetinTouch.webp',
   },

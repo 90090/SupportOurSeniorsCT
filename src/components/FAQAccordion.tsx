@@ -7,66 +7,169 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: 'Why do you need a Senior Advocate ("S.A") / Geriatric Care Manager ("G.C.M") and how can one be helpful?',
+    question: 'What is a senior advocate?',
     answer: (
-      <div className="space-y-4">
-        <ul className="list-disc list-outside ml-5 space-y-2">
-          <li>To open communication with healthcare.</li>
-          <li>To help your concerns be heard.</li>
-          <li>To process what goes on with your loved one.</li>
-          <li>To seek requests for care for loved one.</li>
-          <li>To have a support system.</li>
-          <li>To seek out referrals for the patient.</li>
-          <li>To act as a main point of contact for the many calls for coordination, minutia of planning and minimize the stress on the family by communicating the remarkable items to the family in one call.</li>
-          <li>To provide a seasoned network of known professionals that can provide an array of services.</li>
-          <li>To guide you and provide professional advice.</li>
-          <li>To provide clarity of the future beyond the "immediate or emergency" situation. Create stability, a plan and knowledge for moving forward.</li>
-          <li>To ensure accountability for all involved, "keeping watch" and ease that burden on the loved ones.</li>
+      <div className="space-y-3">
+        <p>A senior advocate is a trusted professional who helps older adults and their families navigate aging-related challenges. This can include assistance with medical appointments, financial organization, household support, care coordination, and overall advocacy to ensure the senior's needs and wishes are respected.</p>
+        <p>At Supporting Our Seniors, our role is to provide clarity, guidance, and peace of mind — acting as an extra layer of support for both seniors and their families.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'How can a senior advocate help my family?',
+    answer: (
+      <div className="space-y-3">
+        <p>A senior advocate helps reduce stress by managing details that often become overwhelming. We help families stay organized, informed, and proactive rather than reactive. This may include:</p>
+        <ul className="list-disc list-outside ml-5 space-y-1.5">
+          <li>Attending medical appointments, advocating for the client and when applicable, reporting back to loved ones</li>
+          <li>Helping organize finances and paperwork</li>
+          <li>Coordinating care and services</li>
+          <li>Advocating for the senior's best interests</li>
+          <li>Supporting caregivers through complex decisions</li>
         </ul>
-        <p>A SA/GCM can help provide support, experienced knowledge and action in the medical and home setting. They provide knowledge and resources regarding options, service care providers and strategic future planning for your loved one. Coordination of specialist appointments, needed transportation, further medical support systems can be managed and coordinated by the SA/GCM, freeing the family of the stress and burden. The health care system can be overwhelming and complicated to navigate through and the emotions and worry of a loved one can add to the stress. The SA/GCM allows the family to focus on the loved one by leading all coordination and communications and provide constant support and recommendations on the situation and next steps.</p>
       </div>
     ),
   },
   {
-    question: 'How does a SA/GCM work?',
+    question: 'Do you replace an attorney, financial advisor, or healthcare provider?',
     answer: (
-      <div className="space-y-4">
-        <p>After an initial consult, Supporting Our Seniors provides a proposal and draft Service Agreement as a "springboard" in creation of a final agreement that meets the family's goals and expectations. Upon signing of agreement and retaining of Supporting Our Seniors, a Certificate of Insurance endorsed to the client is provided.</p>
-        <p>Typical Actions can include meetings with doctors, facility staff, meeting with the patient, coordination of care and facilities.</p>
-        <p>In some cases, a client may reach out during an emergent and "time is of the essence" situation. Supporting Our Seniors has experience with these situations and is able to fast track the intake process and to "hit the ground running" to provide immediate support to the senior and family.</p>
-        <p>No two situations are alike and there are no cookie cutter scenarios! Supporting Our Seniors approaches each case and situation individually and creatively to create the best support and service to ensure the goals of the senior and family are met.</p>
+      <div className="space-y-3">
+        <p>No. We do not replace legal, financial, or medical professionals. Instead, we work alongside them to ensure communication is clear, responsibilities are coordinated, and nothing is overlooked.</p>
+        <p>Many families find that having a senior advocate improves collaboration between professionals, reduces confusion during critical moments, and allows family to be family.</p>
       </div>
     ),
   },
   {
-    question: 'What is a Certified Dementia Practitioner?',
+    question: 'What types of seniors do you work with?',
     answer: (
-      <p>A Certified Dementia Practitioner, or CDP, is someone with a certification demonstrating achievement and specialized training in the areas of Alzheimer's and dementia care. The CDP program recognizes the need for standards in the area of Alzheimer's and dementia education, and it helps improve the services provided by health care professionals and frontline staff. Ongoing continuing education is required to maintain certification.</p>
+      <div className="space-y-3">
+        <p>We work with seniors at many different stages of aging, including those who:</p>
+        <ul className="list-disc list-outside ml-5 space-y-1.5">
+          <li>Want to age safely and comfortably at home</li>
+          <li>Are managing chronic health conditions</li>
+          <li>Are experiencing memory or cognitive changes</li>
+          <li>Need help organizing finances or household responsibilities</li>
+          <li>Require advocacy due to complex family or care situations</li>
+        </ul>
+        <p>Support can be short-term, long-term, or evolving as needs change.</p>
+      </div>
+    ),
+  },
+  {
+    question: "Do you help clients with Alzheimer's, Dementia or memory loss?",
+    answer: (
+      <div className="space-y-3">
+        <p>Yes. We are experienced in supporting seniors with dementia and cognitive decline. As Certified Dementia Practitioners — and having personal experience with loved ones affected by memory loss — we approach every situation with patience, empathy, and deep understanding.</p>
+        <p>We also provide guidance and support to families and caregivers as they navigate the emotional and practical challenges that memory loss can bring.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'What is a Certified Dementia Practitioner (CDP)?',
+    answer: (
+      <p>A Certified Dementia Practitioner (CDP) is a professional who has completed specialized training in Alzheimer's and dementia care. This certification demonstrates a commitment to high standards in dementia education and person-centered care. Ongoing continuing education is required to maintain certification, ensuring current knowledge and best practices in dementia-related support.</p>
+    ),
+  },
+  {
+    question: 'What is the difference between a senior advocate and a caregiver?',
+    answer: (
+      <div className="space-y-3">
+        <p>A caregiver typically provides hands-on personal care, such as bathing, dressing, or meal preparation. A senior advocate focuses on coordination, oversight, organization, and advocacy.</p>
+        <p>Our role is to ensure that care plans are appropriate, services are coordinated, and the senior's voice is heard — often working in partnership with caregivers and home care agencies.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'Do you only work with seniors, or do you support family caregivers too?',
+    answer: (
+      <div className="space-y-3">
+        <p>We support both seniors and their family caregivers. Caregiving can be emotionally and physically demanding, and many caregivers feel overwhelmed or unsure of next steps.</p>
+        <p>Our services are designed to reduce family caregiver burnout by offering guidance, problem-solving, and an experienced advocate who can help shoulder the responsibility.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'How does a Senior Advocate / Geriatric Care Manager help in real life?',
+    answer: (
+      <div className="space-y-3">
+        <p>A Senior Advocate or Geriatric Care Manager provides hands-on support, experienced knowledge, and proactive action in both medical and home settings. We help families understand available options, identify appropriate care providers, and create strategic plans for the future. This may include coordinating specialist appointments, arranging transportation, organizing medical information, and managing communication between providers.</p>
+        <p>The healthcare system can be overwhelming and emotionally taxing. By leading coordination and communication, we allow families to focus on what matters most — spending quality time with their loved one — while receiving clear guidance, recommendations, and next steps.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'Is every situation handled the same way?',
+    answer: (
+      <div className="space-y-3">
+        <p>No. There are no cookie-cutter solutions when it comes to senior care.</p>
+        <p>Every situation is approached individually and thoughtfully. We tailor our services creatively and strategically to ensure the goals, values, and best interests of the senior and family are met.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'Can you help with conservatorship situations?',
+    answer: (
+      <div className="space-y-3">
+        <p>Yes. Supporting Our Seniors provides experienced, court-informed Conservator services and support for families navigating Probate Court matters. We may serve directly as Conservator or assist a family member in that role.</p>
+        <p>Our services include management of court filings and compliance, financial oversight, record organization, day-to-day coordination, and communication among family members and care providers. We approach each case with compassion, accountability, and a clear commitment to protecting the dignity and best interests of the individual.</p>
+      </div>
     ),
   },
   {
     question: 'What is a Conservator?',
     answer: (
-      <div className="space-y-4">
-        <p>A <strong>"conservator of the person"</strong> is appointed by the Probate Court to supervise the personal affairs of an individual who is found by the court to be unable to meet essential requirements for personal needs. These needs may include, but are not limited to, food, clothing, shelter, health care and safety.</p>
-        <p>A <strong>"conservator of the estate"</strong> is appointed by the Probate Court to supervise the finances of an individual who is found by the court to be incapable of managing his or her own finances. This may include, but is not limited to, actions to manage assets, income and public assistance benefits.</p>
+      <div className="space-y-3">
+        <p>A <strong>Conservator of the Person</strong> is appointed by the Connecticut Probate Court to supervise the personal affairs of an individual who is unable to meet essential needs such as food, clothing, shelter, healthcare, and safety.</p>
+        <p>A <strong>Conservator of the Estate</strong> is appointed to oversee the financial affairs of an individual who is unable to manage assets, income, or public assistance benefits.</p>
       </div>
     ),
   },
   {
     question: 'Why do people have conservatorships?',
     answer: (
-      <div className="space-y-4">
-        <p>A conservatorship is a way for someone to assume legal guardianship over an adult. Families often use conservatorships to help deal with the mounting medical, financial and mental health needs of a parent. The status of a conservatorship is dependent on the capacity of the individual to make decisions on their own.</p>
-        <p>Supporting Our Seniors has experience in both Conservatorship of the Person and Estate as well as voluntary, involuntary and contested involuntary Conservatorships. Tamath is also a vetted and approved Regulation 16 Conservator by the State of Connecticut which applies to the compensation of a conservator for a person under conservatorship who is unable to pay for the services of the conservator.</p>
-        <p>If you are considering a Conservatorship for a loved one, Supporting Our Seniors can guide and assist the family/concerned parties of the senior to consider all options and make a decision that is the right fit for the senior and the specific situation.</p>
+      <div className="space-y-3">
+        <p>Conservatorships allow a responsible individual to assume legal oversight when an adult can no longer safely manage personal or financial decisions. Families often pursue conservatorship to address increasing medical, financial, or mental health needs — and often when a Power of Attorney does not exist and is no longer a viable option.</p>
+        <p>Supporting Our Seniors has experience with Conservatorship of the Person and Estate, including voluntary, involuntary, and contested involuntary conservatorships. Tamath is also a vetted and approved Regulation 16 Conservator by the State of Connecticut.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'Can you help families considering conservatorship?',
+    answer: (
+      <div className="space-y-3">
+        <p>Yes. If you are considering conservatorship for a loved one, we help families explore all available options and understand the implications before moving forward.</p>
+        <p>Our role is to guide and support families in making informed decisions that are in the best interest of the senior and appropriate for the specific situation.</p>
       </div>
     ),
   },
   {
     question: 'What is a Daily Money Manager?',
     answer: (
-      <p>A daily money manager is a person who takes over someone's day-to-day financial tasks including reviewing bills, bill paying and reviewing of mail. A variety of people employ daily money managers, ranging from older clients to those simply too busy to maintain total control and accuracy of their financial needs.</p>
+      <p>A Daily Money Manager assists with day-to-day financial tasks such as reviewing mail, organizing bills, and ensuring bills are paid accurately and on time. Daily money management services are commonly used by seniors, caregivers, and individuals who want added oversight, accuracy, and peace of mind when managing financial responsibilities.</p>
+    ),
+  },
+  {
+    question: 'How does the process work?',
+    answer: (
+      <div className="space-y-3">
+        <p>We begin with an initial consultation to understand your concerns, goals, and the senior's unique situation. Following the consultation, Supporting Our Seniors provides a proposal and draft Service Agreement that serves as a starting point for a final agreement tailored to your family's needs.</p>
+        <p>Once services are retained, a Certificate of Insurance endorsed to the client is provided. From there, support may include meetings with doctors, facility staff, the senior, and other professionals, as well as ongoing care coordination and advocacy.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'What if support is needed urgently?',
+    answer: (
+      <div className="space-y-3">
+        <p>In some cases, families reach out during emergent or time-sensitive situations. Supporting Our Seniors has experience handling urgent circumstances and can fast-track the intake process when needed.</p>
+        <p>Our ability to "hit the ground running" allows us to provide immediate support, guidance, and advocacy during critical moments.</p>
+      </div>
+    ),
+  },
+  {
+    question: 'Where do you provide services?',
+    answer: (
+      <p>We provide senior advocacy and support services throughout New Haven, Litchfield, and Fairfield counties in Connecticut. Service availability may vary by need, and we are happy to discuss location-specific questions during a consultation.</p>
     ),
   },
 ];
