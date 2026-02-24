@@ -9,7 +9,7 @@ const navLinks: NavLink[] = [
   { label: 'Home', href: '#top' },
   { label: 'Services', href: '#services' },
   { label: 'About Us', href: '#about' },
-  { label: 'More Details', href: '#details' },
+  { label: 'Our Approach', href: '#approach' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -20,7 +20,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['top', 'services', 'about', 'details', 'contact'];
+      const sections = ['top', 'services', 'about', 'approach', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
