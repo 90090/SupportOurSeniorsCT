@@ -24,6 +24,7 @@ export const services: Service[] = [
         <li>● Reviewing insurance statements and recurring expenses</li>
         <li>● Identifying potential financial risks or concerns</li>
         <li>● Managing the recovery from fraud instances and ensuring best measures are in place to prevent future occurrences.</li>
+        <li>● Assist with Medicaid Applications and/or neccessary support for Medicaid</li>
       </ul>
       <p>Our role is not to replace legal or financial advisors, but to act as a trusted advocate —
       ensuring nothing falls through the cracks and that seniors understand what is happening with

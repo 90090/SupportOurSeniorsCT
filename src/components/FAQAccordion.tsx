@@ -98,6 +98,14 @@ const faqData: FAQItem[] = [
     ),
   },
   {
+    question: 'Do you assist in Medicaid Applications?',
+    answer: (
+      <div className="space-y-3">
+        <p>Yes, We provide skilled, hands-on support with Medicaid applications and eligibility navigation. Our assistance is tailored to each client's unique financial, medical, and family circumstances, ensuring the process is handled accurately, with clarity and confidence.</p>
+      </div>
+    ),
+  },
+  {
     question: 'Is every situation handled the same way?',
     answer: (
       <div className="space-y-3">
