@@ -54,7 +54,7 @@ export const services: Service[] = [
       <p>Medical support services include:</p>
       <ul>
         <li>● Attending medical appointments as an advocate</li>
-        <li>● Taking notes and helping interpret medical information</li>
+        <li>● Assist in determining medical data and taking best plan of action</li>
         <li>● Coordinating communication between providers</li>
         <li>● Assisting with medication organization and reminders</li>
         <li>● Helping families understand care recommendations</li>
@@ -85,7 +85,7 @@ export const services: Service[] = [
       <ul>
         <li>● Coordinating home maintenance and repairs</li>
         <li>● Organizing paperwork, mail, and household systems</li>
-        <li>● Assisting with errands and appointments</li>
+        <li>● Support and facilitate personal needs of clients at home</li>
         <li>● Helping create routines that support daily living</li>
       </ul>
       <p>This service is ideal for seniors who want to stay at home but need extra support managing
@@ -145,15 +145,15 @@ export const services: Service[] = [
       <p>Caring for an aging loved one can be rewarding — but also exhausting. Our family caregiver
       support services are designed to reduce burnout, provide guidance, and ensure caregivers
       are not navigating this journey alone.</p>
-      <p>Caregiver support may include:</p>
+      <p>Family Caregiver support may include:</p>
       <ul>
         <li>● Guidance and education on aging-related challenges</li>
-        <li>● Help coordinating care and services</li>
+        <li>● Help coordinating care and services and more</li>
         <li>● Emotional support and problem-solving</li>
         <li>● Acting as a liaison between caregivers and professionals</li>
       </ul>
       <p>By supporting caregivers, we help create healthier, more sustainable care environments.</p>
-      <p>A complimentary consultations with the client and family is
+      <p>Complimentary consultation with the client and family is
         always provided to determine and discuss challenges, family dynamics, needs
         and expectations of the client and family. This complimentary session
         allows us to provide the most robust plan moving forward and is individually created based
@@ -193,7 +193,7 @@ export const services: Service[] = [
         <li>● Financial transition guidance to support informed and confident decision-making</li>
         <li>● Coordination of trusted professionals, including realtors, contractors, clean-out
             services, and other necessary providers</li>
-        <li>● Oversight of the entire process to ensure clients retain the maximum financial benefit
+        <li>● Hands on assistance to ensure clients retain the maximum financial benefit
             available during the transition</li>
       </ul>
       <p>We understand that downsizing is more than a move — it is a significant life change. Our role
