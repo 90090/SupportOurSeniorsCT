@@ -2,40 +2,76 @@
 import Layout from '../layouts/Layout.astro';
 import ServiceCard from '../components/ServiceCard';
 import { services, aboutContent } from '../data/content';
+
+
 ---
 
 <Layout title="Supporting Our Seniors, LLC - Senior Advocate CT">
+
+  
   <!-- Hero Section -->
-  <!-- On mobile: background-attachment fixed causes issues, so we use bg-scroll on small screens -->
-  <section id="top" class="relative min-h-[500px] md:min-h-[600px] flex items-end pb-10 md:pb-16 px-5 md:px-8 overflow-hidden">
-    <!-- Background: fixed parallax on md+, plain cover on mobile -->
-    <div 
-      class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
-      style="background-image: url('/Hero.webp');"
-    ></div>
-    
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-white/50"></div>
-    
-    <!-- Content - full width on mobile, 2/3 on desktop -->
-    <div class="relative z-10 w-full md:max-w-[66%] text-left">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-[var(--color-accent)] leading-tight drop-shadow-[2px_4px_8px_rgba(0,0,0,1)]">
-        Experience & Compassion
-      </h1>
-      <p class="text-base md:text-xl font-bold leading-relaxed mb-6 md:mb-8 text-black max-w-[700px]">
-        Personalized services to seniors and their families to assist in navigating aging, financial planning, caregiver coordination, conservatorship guidance and more. 
-      </p>
-      <a 
-        href="#about" 
-        class="inline-flex items-center gap-3 px-6 py-3 bg-[var(--color-purple-dark)] text-white rounded-lg font-semibold text-base transition-all duration-300 hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-xl"
-      >
-        Read More
-        <svg viewBox="0 0 60 60" height="18" width="18" class="fill-current transition-transform duration-300 group-hover:translate-x-1">
-          <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"/>
-        </svg>
-      </a>
+<!-- Hero Section -->
+<section id="top" class="relative min-h-[600px] md:min-h-[650px] flex items-start md:items-end pt-10 md:pt-0 pb-0 md:pb-16 px-5 md:px-8 overflow-hidden">
+
+  <!-- Video Background -->
+  <video
+    id="hero-video"
+    class="absolute inset-0 w-full h-full object-cover"
+    poster="/Hero.webp"
+    preload="none"
+  >
+    <source src="/Hero.webm" type="video/webm">
+    <source src="/Hero.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay — stronger at top on mobile so text is readable, stronger at bottom on desktop -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/10 md:bg-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 hidden md:block"></div>
+
+  <!-- Play Button -->
+  <button
+    id="hero-play-btn"
+    class="absolute top-7/8 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer bg-transparent border-0"
+    aria-label="Play video"
+  >
+    <div id="play-icon" class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 border-2 border-white/60 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-white/30 group-hover:scale-110">
+      <svg viewBox="0 0 60 60" width="24" height="24" class="fill-white ml-1">
+        <path d="M12 6l36 24-36 24z"/>
+      </svg>
     </div>
-  </section>
+  </button>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full md:max-w-[66%] text-left">
+
+    <p class="text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-white/60 mb-2 md:mb-3">
+      Senior Care Services
+    </p>
+
+    <h2 class="text-md md:text-6xl lg:text-7xl  mb-3 md:mb-6 text-[var(--color-accent)] leading-tight">
+      Experience &amp;<br class="md:hidden"> Compassion
+    </h2>
+
+    <!-- Hidden on mobile, shown on md+ -->
+    <p class="hidden md:block text-xl leading-relaxed mb-8 text-white/90 max-w-[700px]">
+      Personalized services to seniors and their families to assist in navigating
+      aging, financial planning, caregiver coordination, conservatorship guidance and more.
+    </p>
+
+    <a
+      href="#about"
+      class="inline-flex items-center gap-3 px-5 py-2.5 md:px-6 md:py-3 bg-[var(--color-purple-dark)] text-white rounded-lg font-semibold text-sm md:text-base transition-all duration-300 hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-xl"
+    >
+      Read More
+      <svg viewBox="0 0 60 60" height="16" width="16" class="fill-current md:w-[18px] md:h-[18px]">
+        <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"/>
+      </svg>
+    </a>
+
+  </div>
+</section>
+
+
 
   <!-- Services Section -->
   <section id="services" class="py-14 md:py-20 bg-[var(--color-bg-alt)]">
@@ -476,4 +512,34 @@ import { services, aboutContent } from '../data/content';
     </div>
   </div>
 </section>
+
+<script>
+  const video = document.getElementById('hero-video') as HTMLVideoElement;
+  const btn = document.getElementById('hero-play-btn');
+  const icon = document.getElementById('play-icon');
+  const readMore = document.querySelector('#top a[href="#about"]');
+
+  readMore?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  btn?.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      icon!.innerHTML = `
+        <svg viewBox="0 0 60 60" width="28" height="28" class="fill-white">
+          <rect x="10" y="8" width="14" height="44" rx="2"/>
+          <rect x="36" y="8" width="14" height="44" rx="2"/>
+        </svg>`;
+      btn.setAttribute('aria-label', 'Pause video');
+    } else {
+      video.pause();
+      icon!.innerHTML = `
+        <svg viewBox="0 0 60 60" width="28" height="28" class="fill-white ml-1">
+          <path d="M12 6l36 24-36 24z"/>
+        </svg>`;
+      btn.setAttribute('aria-label', 'Play video');
+    }
+  });
+</script>
 </Layout>
