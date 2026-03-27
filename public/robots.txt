@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supportingourseniorsct.com/sitemap-index.xml

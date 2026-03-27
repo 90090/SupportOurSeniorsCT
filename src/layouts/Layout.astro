@@ -2,35 +2,45 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'FaqPage';
+  noindex?: boolean;
 }
 
-const { title, description = 'Supporting our Seniors, LLC provides support services to seniors and their families to assist in navigating the aging process.' } = Astro.props;
+const { title, description, image, type, noindex } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+      noindex={noindex}
+    />
+    <slot name="head" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="192x192" href="/Logo.webp" />
-    <link rel="shortcut icon" type="image/png" href="/Logo.webp" />
-    <link rel="apple-touch-icon" href="/Logo.webp" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/192.png" />
+    <link rel="shortcut icon" type="image/png" href="/512.png" />
+    <link rel="apple-touch-icon" href="/32.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     
-    <!-- Fonts -->
+    <!-- Preconnect to any external origins you load from -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;700&display=swap" 
-      rel="stylesheet" 
-    />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <meta name="theme-color" content="#112F5B" />
   </head>
   <body>
     <Header />

@@ -2,74 +2,136 @@
 import Layout from '../layouts/Layout.astro';
 import ServiceCard from '../components/ServiceCard';
 import { services, aboutContent } from '../data/content';
-
+import JsonLD from '../components/JsonLD.astro';
+import ContactForm from '../components/ContactForm.jsx';
 
 ---
 
-<Layout title="Supporting Our Seniors, LLC - Senior Advocate CT">
+<Layout
+  title="Home"
+  description="Personalized senior care services helping families navigate aging, financial planning, and caregiver coordination."
+  image="/1200.png"
+  type="website"
 
+  >
+  <JsonLD slot="head" schema={{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Support Our Seniors, LLC",
+    "description": "Personalized senior care services helping families navigate aging, financial planning, and caregiver coordination.",
+    "url": "https://supportingourseniorsct.com",
+    "telephone": "+1-203-910-5998",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Heritage Village, 519 Heritage Drive, Suite 3B",
+      "addressLocality": "Southbury",
+      "addressRegion": "CT",
+      "postalCode": "06488",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "sameAs": [
+      "https://www.facebook.com/supportingourseniorsct",
+      "https://www.instagram.com/supportingourseniorsct"
+    ]
+  }} />
   
   <!-- Hero Section -->
-<!-- Hero Section -->
-<section id="top" class="relative min-h-[600px] md:min-h-[650px] flex items-start md:items-end pt-10 md:pt-0 pb-0 md:pb-16 px-5 md:px-8 overflow-hidden">
+  <section id="top" class="relative">
 
-  <!-- Video Background -->
-  <video
-    id="hero-video"
-    class="absolute inset-0 w-full h-full object-cover"
-    poster="/Hero.webp"
-    preload="none"
-  >
-    <source src="/Hero.webm" type="video/webm">
-    <source src="/Hero.mp4" type="video/mp4">
-  </video>
-
-  <!-- Overlay — stronger at top on mobile so text is readable, stronger at bottom on desktop -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/10 md:bg-none"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 hidden md:block"></div>
-
-  <!-- Play Button -->
-  <button
-    id="hero-play-btn"
-    class="absolute top-7/8 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer bg-transparent border-0"
-    aria-label="Play video"
-  >
-    <div id="play-icon" class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 border-2 border-white/60 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-white/30 group-hover:scale-110">
-      <svg viewBox="0 0 60 60" width="24" height="24" class="fill-white ml-1">
-        <path d="M12 6l36 24-36 24z"/>
-      </svg>
+    <!-- ── MOBILE: Text stacked above video ── -->
+    <div class="md:hidden px-5 pt-10 pb-4 bg-white dark:bg-[#0f0f0f]">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 mb-2">
+        Senior Care Services
+      </p>
+      <h2 class="text-4xl mb-3 text-[var(--color-accent)] leading-tight">
+        Experience &amp;<br> Compassion
+      </h2>
+      <p class="text-sm leading-relaxed mb-5 text-gray-500">
+        Personalized services to seniors and their families to assist in navigating
+        aging, financial planning, caregiver coordination, conservatorship guidance and more.
+      </p>
+      <a href="#about"
+        class="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--color-purple-dark)] text-white rounded-lg font-semibold text-sm transition-all hover:bg-[var(--color-accent)]">
+        Read More
+        <svg viewBox="0 0 60 60" height="14" width="14" class="fill-current">
+          <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"/>
+        </svg>
+      </a>
     </div>
-  </button>
 
-  <!-- Content -->
-  <div class="relative z-10 w-full md:max-w-[66%] text-left">
+    <!-- ── MOBILE: Video below text ── -->
+    <div class="md:hidden relative w-full aspect-video bg-black">
+      <video id="hero-video"
+        class="w-full h-full object-cover"
+        poster="/Hero.webp"
+        preload="none">
+        <source src="/Hero.webm" type="video/webm">
+        <source src="/Hero.mp4" type="video/mp4">
+      </video>
+      <button id="hero-play-btn"
+        class="absolute inset-0 flex items-center justify-center bg-black/25 border-0 cursor-pointer group"
+        aria-label="Play video">
+        <div id="play-icon" class="w-14 h-14 rounded-full bg-white/20 border-2 border-white/60 flex items-center justify-center transition-all group-hover:bg-white/30 group-hover:scale-110">
+          <svg viewBox="0 0 60 60" width="20" height="20" class="fill-white ml-1">
+            <path d="M12 6l36 24-36 24z"/>
+          </svg>
+        </div>
+      </button>
+    </div>
 
-    <p class="text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-white/60 mb-2 md:mb-3">
-      Senior Care Services
-    </p>
+    <!-- ── DESKTOP: Split layout — text left, video right ── -->
+    <div class="hidden md:flex relative min-h-[650px] overflow-hidden">
 
-    <h2 class="text-md md:text-6xl lg:text-7xl  mb-3 md:mb-6 text-[var(--color-accent)] leading-tight">
-      Experience &amp;<br class="md:hidden"> Compassion
-    </h2>
+      <!-- Left: Text panel -->
+      <div class="relative z-10 w-[42%] flex flex-col justify-center px-12 py-16 bg-white dark:bg-[#0f0f0f]">
+        <p class="text-sm font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">
+          Senior Care Services
+        </p>
+        <h2 class="text-5xl xl:text-6xl mb-6 text-[var(--color-accent)] leading-tight">
+          Experience &amp;<br> Compassion
+        </h2>
+        <p class="text-lg leading-relaxed mb-8 text-gray-500 dark:text-gray-400">
+          Personalized services to seniors and their families to assist in navigating
+          aging, financial planning, caregiver coordination, conservatorship guidance and more.
+        </p>
+        <div>
+          <a href="#about"
+            class="inline-flex items-center gap-3 px-6 py-3 bg-[var(--color-purple-dark)] text-white rounded-lg font-semibold text-base transition-all hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-xl">
+            Read More
+            <svg viewBox="0 0 60 60" height="18" width="18" class="fill-current">
+              <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
 
-    <!-- Hidden on mobile, shown on md+ -->
-    <p class="hidden md:block text-xl leading-relaxed mb-8 text-white/90 max-w-[700px]">
-      Personalized services to seniors and their families to assist in navigating
-      aging, financial planning, caregiver coordination, conservatorship guidance and more.
-    </p>
+      <!-- Right: Video panel -->
+      <div class="relative w-[58%]">
+        <video id="hero-video-desktop"
+          class="absolute inset-0 w-full h-full object-cover"
+          poster="/Hero.webp"
+          preload="none">
+          <source src="/Hero.webm" type="video/webm">
+          <source src="/Hero.mp4" type="video/mp4">
+        </video>
+        <!-- Subtle gradient on the left edge to blend into text panel -->
+        <div class="absolute inset-y-0 left-0 w-1 bg-gradient-to-r from-white dark:from-[#0f0f0f] to-transparent z-10 pointer-events-none"></div>
+        <!-- Play button -->
+        <button id="hero-play-btn-desktop"
+          class="absolute inset-0 flex items-center justify-center z-20 bg-transparent border-0 cursor-pointer group"
+          aria-label="Play video">
+          <div id="play-icon-desktop" class="w-20 h-20 rounded-full bg-white/20 border-2 border-white/60 backdrop-blur-sm flex items-center justify-center transition-all group-hover:bg-white/30 group-hover:scale-110">
+            <svg viewBox="0 0 60 60" width="24" height="24" class="fill-white ml-1">
+              <path d="M12 6l36 24-36 24z"/>
+            </svg>
+          </div>
+        </button>
+      </div>
 
-    <a
-      href="#about"
-      class="inline-flex items-center gap-3 px-5 py-2.5 md:px-6 md:py-3 bg-[var(--color-purple-dark)] text-white rounded-lg font-semibold text-sm md:text-base transition-all duration-300 hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-xl"
-    >
-      Read More
-      <svg viewBox="0 0 60 60" height="16" width="16" class="fill-current md:w-[18px] md:h-[18px]">
-        <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"/>
-      </svg>
-    </a>
+    </div>
 
-  </div>
-</section>
+  </section>
 
 
 
@@ -173,7 +235,7 @@ import { services, aboutContent } from '../data/content';
           <!-- Photo -->
           <div class="w-full sm:w-48 md:w-56 flex-shrink-0">
             <div class="bg-white/10 rounded-lg overflow-hidden aspect-[3/4] w-full sm:w-48 md:w-56">
-              <img src="/about/about2.webp" alt="Tamath K. Rossi" class="w-full h-full object-cover object-top" />
+              <img src="/about/about2.webp" alt="Tamath K. Rossi, Founder & Senior Advocate" class="w-full h-full object-cover object-top" />
             </div>
           </div>
           <!-- Bio -->
@@ -195,9 +257,9 @@ import { services, aboutContent } from '../data/content';
         <div class="flex flex-col sm:flex-row gap-6 md:gap-10 items-start">
           <!-- Photo -->
           <div class="w-full sm:w-48 md:w-56 flex-shrink-0">
-            <div class="bg-white/10 rounded-lg overflow-hidden aspect-[3/4] w-full sm:w-48 md:w-56">
+            <!-- <div class="bg-white/10 rounded-lg overflow-hidden aspect-[3/4] w-full sm:w-48 md:w-56">
               <img src="/about/ally.webp" alt="Alexandra Cooper" class="w-full h-full object-cover object-top" />
-            </div>
+            </div> -->
           </div>
           <!-- Bio -->
           <div class="flex-1">
@@ -246,7 +308,7 @@ import { services, aboutContent } from '../data/content';
         <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start mb-16 md:mb-20">
           <div class="w-full lg:w-1/2">
             <div class="bg-gray-200 rounded-lg overflow-hidden sm:h-80 md:h-[520px]">
-              <img src="/about/IMG_9124.jpg" alt="Our approach" class="w-full h-full object-cover" />
+              <img src="/about/IMG_9124.jpg" alt="Tamath and Ally together in a picture" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="w-full lg:w-1/2 text-[var(--color-text)]">
@@ -353,27 +415,27 @@ import { services, aboutContent } from '../data/content';
         </div>
         
         <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
-          <img src="/certifications/AADMM.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+          <img src="/certifications/AADMM.webp" alt="American Association of Daily Money Managers Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
         </div>
         
         <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
-          <img src="/certifications/ACOA.webp" alt="Affiliation" class="max-h-28 md:max-h-32 w-auto object-contain" />
+          <img src="/certifications/ACOA.webp" alt="American Society of Aging Affiliation" class="max-h-28 md:max-h-32 w-auto object-contain" />
         </div>
         
         <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
-          <img src="/certifications/AIM.webp" alt="Affiliation" class="max-h-28 md:max-h-32 w-auto object-contain" />
+          <img src="/certifications/AIM.webp" alt="Alzheimers Impact Movement Affiliation" class="max-h-28 md:max-h-32 w-auto object-contain" />
         </div>
 
         <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
-          <img src="/certifications/NCCDP.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+          <img src="/certifications/NCCDP.webp" alt="National Council of Certified Dementia Practitioners Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
         </div>
 
         <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
-          <img src="/certifications/NCOA.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+          <img src="/certifications/NCOA.webp" alt="National Council of Aging Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
         </div>
 
         <div class="flex items-center justify-center p-5 md:p-6 bg-white rounded-lg shadow-md">
-          <img src="/certifications/waterburybar.webp" alt="Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
+          <img src="/certifications/waterburybar.webp" alt="Waterbury Bar Association Certification" class="max-h-28 md:max-h-32 w-auto object-contain" />
         </div>
       </div>
       
@@ -430,66 +492,13 @@ import { services, aboutContent } from '../data/content';
       <!-- Bottom row: Form + Map/Image -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
-        <!-- Contact Form -->
-        <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-6 md:p-10">
-          <form class="space-y-5 md:space-y-6">
-            <div>
-              <label for="name" class="block mb-2 font-semibold text-[var(--color-purple-dark)] text-sm md:text-base">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required 
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm md:text-base"
-              />
-            </div>
-
-            <div>
-              <label for="email" class="block mb-2 font-semibold text-[var(--color-purple-dark)] text-sm md:text-base">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm md:text-base"
-              />
-            </div>
-
-            <div>
-              <label for="phone" class="block mb-2 font-semibold text-[var(--color-purple-dark)] text-sm md:text-base">Phone</label>
-              <input 
-                type="tel" 
-                id="phone" 
-                name="phone" 
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm md:text-base"
-              />
-            </div>
-
-            <div>
-              <label for="message" class="block mb-2 font-semibold text-[var(--color-purple-dark)] text-sm md:text-base">Message</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="5" 
-                required 
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none text-sm md:text-base"
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit" 
-              class="w-full px-8 py-3 md:py-4 bg-[var(--color-accent)] text-black rounded-lg text-base md:text-lg font-semibold transition-all duration-300 hover:bg-[var(--color-accent)] hover:-translate-y-1 hover:shadow-lg"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+        <ContactForm client:load/>
 
         <!-- Right column: photo + map stacked -->
         <div class="flex flex-col gap-6">
           <!-- Contact image -->
           <div class="rounded-lg overflow-hidden h-48 sm:h-64 lg:h-72 flex-shrink-0">
-            <img src="" alt="Picture of the Office" class="w-full h-full object-cover" />
+            <img src="/contact/Office.png" alt="Picture of the Office with a Sign above the front doors, with our logo" class="w-full h-full object-cover" />
           </div>
 
           <!-- Google Maps embed -->
@@ -513,33 +522,92 @@ import { services, aboutContent } from '../data/content';
   </div>
 </section>
 
-<script>
-  const video = document.getElementById('hero-video') as HTMLVideoElement;
-  const btn = document.getElementById('hero-play-btn');
-  const icon = document.getElementById('play-icon');
-  const readMore = document.querySelector('#top a[href="#about"]');
+  <script>
+    function initVideoPlayer(videoId: string, btnId: string, iconId: string, isMobile: boolean) {
+      const video = document.getElementById(videoId) as HTMLVideoElement;
+      const btn = document.getElementById(btnId) as HTMLButtonElement;
+      const icon = document.getElementById(iconId);
+      if (!video || !btn || !icon) return;
 
-  readMore?.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+      const PAUSE_SVG = `<svg viewBox="0 0 60 60" width="28" height="28" class="fill-white">
+        <rect x="10" y="8" width="14" height="44" rx="2"/>
+        <rect x="36" y="8" width="14" height="44" rx="2"/>
+      </svg>`;
+      const PLAY_SVG = `<svg viewBox="0 0 60 60" width="28" height="28" class="fill-white ml-1">
+        <path d="M12 6l36 24-36 24z"/>
+      </svg>`;
 
-  btn?.addEventListener('click', () => {
-    if (video.paused) {
-      video.play();
-      icon!.innerHTML = `
-        <svg viewBox="0 0 60 60" width="28" height="28" class="fill-white">
-          <rect x="10" y="8" width="14" height="44" rx="2"/>
-          <rect x="36" y="8" width="14" height="44" rx="2"/>
-        </svg>`;
-      btn.setAttribute('aria-label', 'Pause video');
-    } else {
-      video.pause();
-      icon!.innerHTML = `
-        <svg viewBox="0 0 60 60" width="28" height="28" class="fill-white ml-1">
-          <path d="M12 6l36 24-36 24z"/>
-        </svg>`;
-      btn.setAttribute('aria-label', 'Play video');
+      function showBtn() { btn.style.opacity = '1'; btn.style.pointerEvents = 'auto'; }
+      function hideBtn() { btn.style.opacity = '0'; btn.style.pointerEvents = 'none'; }
+
+      // Smooth fade transition on the button
+      btn.style.transition = 'opacity 0.3s ease';
+
+      btn.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+          icon.innerHTML = PAUSE_SVG;
+          btn.setAttribute('aria-label', 'Pause video');
+          if (isMobile) {
+            // On mobile: hide button entirely while playing
+            hideBtn();
+          }
+        } else {
+          video.pause();
+          icon.innerHTML = PLAY_SVG;
+          btn.setAttribute('aria-label', 'Play video');
+          showBtn();
+        }
+      });
+
+      if (isMobile) {
+        // Tap anywhere on the video to pause while playing, show button
+        video.addEventListener('click', () => {
+          if (!video.paused) {
+            video.pause();
+            icon.innerHTML = PLAY_SVG;
+            btn.setAttribute('aria-label', 'Play video');
+            showBtn();
+          }
+        });
+      } else {
+        // Desktop: hide button after 2s of playing, show on hover
+        let hideTimer: ReturnType<typeof setTimeout>;
+
+        function scheduleHide() {
+          clearTimeout(hideTimer);
+          hideTimer = setTimeout(() => {
+            if (!video.paused) hideBtn();
+          }, 2000);
+        }
+
+        video.addEventListener('play', () => scheduleHide());
+
+        // Show on mouse move over the video container, then fade again
+        const container = btn.closest('.md\\:flex') as HTMLElement;
+        container?.addEventListener('mousemove', () => {
+          showBtn();
+          scheduleHide();
+        });
+        container?.addEventListener('mouseleave', () => {
+          if (!video.paused) hideBtn();
+        });
+      }
+
+      // Reset on video end
+      video.addEventListener('ended', () => {
+        icon.innerHTML = PLAY_SVG;
+        btn.setAttribute('aria-label', 'Play video');
+        showBtn();
+      });
     }
-  });
-</script>
+
+    // Pass true for mobile, false for desktop
+    initVideoPlayer('hero-video', 'hero-play-btn', 'play-icon', true);
+    initVideoPlayer('hero-video-desktop', 'hero-play-btn-desktop', 'play-icon-desktop', false);
+
+    document.querySelector('#top a[href="#about"]')
+      ?.addEventListener('click', (e) => e.stopPropagation());
+  </script>
+  
 </Layout>

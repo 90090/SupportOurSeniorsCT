@@ -42,7 +42,8 @@ export default function Navigation() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     // Check if we're on the FAQ page
-    const isOnFaqPage = window.location.pathname === '/faq';
+    const pathname = window.location.pathname.replace(/\/$/, ''); // strip trailing slash
+    const isOnFaqPage = pathname === '/faq';
     
     if (href.startsWith('#')) {
       // If on FAQ page and trying to navigate to a hash, go to home page first

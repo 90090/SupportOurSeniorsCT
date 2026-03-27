@@ -81,7 +81,7 @@ export const services: Service[] = [
       <p>A safe, organized home environment is essential for aging in place. We assist with the day-to-
       day tasks that can become challenging over time — helping seniors remain comfortable and
       independent in their own homes.</p>
-      <p>Household support map include:</p>
+      <p>Household support may include:</p>
       <ul>
         <li>● Coordinating home maintenance and repairs</li>
         <li>● Organizing paperwork, mail, and household systems</li>

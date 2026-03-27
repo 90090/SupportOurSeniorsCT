@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: 'website' | 'FaqPage';
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  image = '/Favicon.png',
+  canonicalURL = Astro.url.href,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const siteName = 'Support Our Seniors';
+const fullTitle = `${title} | ${siteName}`;
+const absoluteImage = new URL(image, Astro.site).href;
+---
+
+<!-- Primary -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={absoluteImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteImage} />
+<!-- <meta name="twitter:site" content="@yourhandle" /> -->
+
+
+
+<!-- Preconnect for performance (add your actual third parties) -->
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
