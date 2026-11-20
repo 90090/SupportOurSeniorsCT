@@ -27,7 +27,7 @@ jobs:
 
       - name: Report to Site Health
         env:
-          SITE_ID: supportourseniorsct
+          SITE_ID: supportingourseniorsct
           SITE_HEALTH_URL: https://2s1b76kije.execute-api.us-east-1.amazonaws.com
           SITE_HEALTH_TOKEN: ${{ secrets.SITE_HEALTH_TOKEN }}
         run: |
